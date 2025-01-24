@@ -218,7 +218,7 @@ LinkedIn summaries are an excellent way to introduce yourself and your skills to
 Take this Linkedin profile context, write an About section that recruiters would find compelling, taking in consideration the job experience that the attachment has for the person. Make sure the last sentence is CTA to reach out if interested to speak.
 Whatever the guidance you've been given has been, be sure that whatever copy you produce the tone of the copy needs to be ${getVibeDescription(vibe, isGPT)}.
 
-Don't inluude any phone numbers, hashtags or websites. The following content is the copy that the user added to this application provided from various sources, this is baseline you'll use to build upon: ${bio}${
+Don't inluude any phone numbers, hashtags or websites. Add paragraph breaks will it feels natural. The following content is the copy that the user added to this application provided from various sources, this is baseline you'll use to build upon: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -278,7 +278,7 @@ Don't inluude any phone numbers, hashtags or websites. The following content is 
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Paste your LinkedIn Profile Page{" "}
+              Paste your LinkedIn Profile <a href="/linkedin-profile-pdf.png" targe="_blank"><u>PDF</u></a>, Resume, etc{" "}
               <span className="text-slate-500"></span>
             </p>
           </div>
