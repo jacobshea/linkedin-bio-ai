@@ -278,7 +278,7 @@ Don't inluude any phone numbers, hashtags or websites. Add paragraph breaks will
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Paste your LinkedIn Profile <a href="/linkedin-profile-pdf.png" targe="_blank"><u>PDF</u></a>, Resume, etc{" "}
+              Paste your LinkedIn Profile <a href="/linkedin-profile-pdf.png" target="_blank"><u>PDF</u></a>, Resume, etc{" "}
               <span className="text-slate-500"></span>
             </p>
           </div>
