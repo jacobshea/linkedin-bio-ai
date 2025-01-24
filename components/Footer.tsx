@@ -11,12 +11,12 @@ export default function Footer() {
           rel="noreferrer"
           className="font-bold hover:underline transition underline-offset-2"
         >
-          Together AI
+          OpenAI
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://twitter.com/nutlope"
+          href="https://twitter.com/jacobshea"
           className="group"
           aria-label="TaxPal on Twitter"
         >
@@ -30,7 +30,6 @@ export default function Footer() {
         <Link
           href="https://github.com/Nutlope/twitterbio"
           className="group"
-          aria-label="TaxPal on GitHub"
         >
           <svg
             aria-hidden="true"

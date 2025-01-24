@@ -7,59 +7,53 @@ function classNames(...classes: any) {
 
 export default function Toggle({ isGPT, setIsGPT }: any) {
   return (
-    <Switch.Group as="div" className="flex items-center">
-      <Switch.Label
-        as="span"
-        className="mr-3 text-sm flex justify-center gap-2 items-center"
+    <div className="flex items-center">
+      <label
+        className="mr-3 text-sm flex justify-center gap-2 items-center cursor-pointer"
       >
         <Image
-          src="/mistral-logo.jpeg"
-          width={25}
-          height={25}
-          alt="1 icon"
-          className={`${isGPT && "opacity-50"}`}
+          src="/open-ai-logo.png"
+          width={85}
+          height={85}
+          alt="Open AI logo"
+          className={`${isGPT ? "opacity-50" : ""}`}
         />
-        <span
-          className={`font-medium ${isGPT ? "text-gray-400" : "text-gray-900"}`}
-        >
-          Mixtral 8x7B
-        </span>{" "}
-      </Switch.Label>
+      </label>
       <Switch
         checked={isGPT}
-        onChange={setIsGPT}
+        onChange={(newIsGPT) => {
+          console.log('Toggle changed to:', newIsGPT);  // Log the new state
+          setIsGPT(newIsGPT);  // Update the state
+        }}
         className={classNames(
           isGPT ? "bg-black" : "bg-gray-200",
-          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-offset-2"
+          "relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none"
         )}
       >
         <span
           aria-hidden="true"
           className={classNames(
             isGPT ? "translate-x-5" : "translate-x-0",
-            "pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+            "pointer-events-none inline-block h-5 w-5 transform bg-white rounded-full shadow ring-0 transition duration-200 ease-in-out"
           )}
         />
       </Switch>
-      <Switch.Label
-        as="span"
-        className="ml-3 text-sm flex justify-center gap-2 items-center"
+      <label
+        className="ml-3 text-sm flex justify-center gap-2 items-center cursor-pointer"
       >
         <span
-          className={`font-medium ${
-            !isGPT ? "text-gray-400" : "text-gray-900"
-          }`}
+          className={`font-medium ${!isGPT ? "text-gray-400" : "text-gray-900"}`}
         >
-          Llama 3.1 8B
-        </span>{" "}
+         Plus Pirate Talk
+        </span>
         <Image
-          src="/llama-logo.webp"
+          src="/pirate-logo.png"
           width={40}
           height={40}
-          alt="Meta logo"
-          className={`${!isGPT && "opacity-50"}`}
+          alt="Pirate logo"
+          className={`${!isGPT ? "opacity-50" : ""}`}
         />
-      </Switch.Label>
-    </Switch.Group>
+      </label>
+    </div>
   );
 }
