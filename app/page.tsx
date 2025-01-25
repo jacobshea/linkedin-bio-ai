@@ -292,7 +292,7 @@ Don't inluude any phone numbers, hashtags or websites. Add paragraph breaks will
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="Select your vibe" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="text-left font-medium">Select your vibe</p>
           </div>
           <DropDown vibe={vibe} setVibe={setVibe} />
 
